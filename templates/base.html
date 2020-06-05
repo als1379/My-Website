@@ -7,16 +7,46 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            .masthead {
+                height: 100vh;
+                min-height: 500px;
+                background-image: url(/media/static/photo-1528731708534-816fe59f90cb.jpeg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .button {
+                background-color: white;
+                color: black;
+                border: 2px solid #4c4c4c;
+                padding: 10px 20px;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            .btn {
+                display: inline-block;
+                background-color: #4c4c4c;
+                color: #FFFFFF;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+                margin-left: 20px;
+                opacity: 0.9;
+            }
 
+
+
+        </style>
         <title>My Website</title>
     </head>
     <body>
+    {% load static %}
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <h3 class="navbar-brand" >My Website</h3>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
@@ -24,18 +54,19 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="/#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="/#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Blog</a>
         </li>
+
       </ul>
     </div>
   </nav>
-        {% block content %}
+       {% block content %}
 
         {% endblock %}
 
