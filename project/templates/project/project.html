@@ -1,4 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>{{ project.title }}</h1>
+    {% load static %}
+    <br>
+    <br>
+    <section style = "font-family:'DejaVu Sans';">
+        <div class="container">
+            <img src="{{ project.image.url }}" width="250" height="250">
+            <br>
+            <br>
+            <div id="title">
+                <h2>{{ project.title }}</h2>
+            </div>
+
+            <div>
+                <h5> {{ project.sub_title }}
+                <h6 style="color: darkred">{{ project.language }}</h6>
+                <a href="{{ project.link }}" ><img src="{% static 'profile/GitHub-Mark.png' %}" height="50" width="50">
+                    github link
+                </a></h5>
+            </div>
+            <div>
+                <p>{{ project.description|safe }}</p>
+            </div>
+        </div>
+    </section>
 {% endblock %}
