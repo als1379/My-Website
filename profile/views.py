@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project
+from project.models import Project
 
 
 def home(request):
